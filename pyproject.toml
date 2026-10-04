@@ -1,0 +1,10 @@
+[project]
+name = "tripiii-travel-planning-system"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ayush Paliwal", email = "ayushpaliwal1920@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
