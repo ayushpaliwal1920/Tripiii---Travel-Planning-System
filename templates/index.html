@@ -2,39 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TripMate AI - a multi-agent travel planner that searches flights, discovers hotels and builds a complete itinerary.">
+    <meta name="theme-color" content="#0c2340">
 
     <title>TripMate AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/static/style.css">
 </head>
 
 <body>
 
-    <div class="page-bg">
-        <div class="gradient-circle circle-1"></div>
-        <div class="gradient-circle circle-2"></div>
-        <div class="gradient-circle circle-3"></div>
-    </div>
+    <header class="navbar">
+        <div class="nav-inner">
+            <a class="brand" href="#top" aria-label="TripMate AI home">
+                <span class="brand-mark">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
+                    </svg>
+                </span>
+                <span class="brand-name">TripMate <span>AI</span></span>
+            </a>
 
-    <main class="app-container">
+            <nav class="nav-links">
+                <a href="#planner">Planner</a>
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it works</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="app-container" id="top">
 
         <section class="hero-section">
             <div class="badge">
-                ✈️ Tripiii — A Multi-Agent Travel Planner
+                Multi-Agent Travel Planner
             </div>
 
             <h1>
-                Plan Your Perfect Trip with AI
+                Plan Your <span class="accent-text">Perfect Trip</span> with AI
             </h1>
 
             <p>
                 Search flights, discover hotels, and generate a complete travel itinerary using a multi-agent LangGraph system.
             </p>
+
+            <ul class="hero-stats">
+                <li><strong>3</strong><span>Specialised agents</span></li>
+                <li><strong>Live</strong><span>Flight &amp; web data</span></li>
+                <li><strong>PDF</strong><span>One-click export</span></li>
+            </ul>
         </section>
 
-        <section class="planner-card">
+        <section class="planner-card" id="planner">
 
             <div class="card-header">
                 <div>
@@ -60,6 +84,11 @@
                     <span id="btnText">Generate Plan</span>
                     <span id="btnLoader" class="loader hidden"></span>
                 </button>
+            </div>
+
+            <div class="quick-row">
+                <span class="quick-label">Quick start</span>
+                <span class="hint">Press <kbd>Ctrl</kbd> + <kbd>Enter</kbd> to generate</span>
             </div>
 
             <div class="quick-prompts">
@@ -110,10 +139,79 @@
 
         <section id="errorBox" class="error-box hidden"></section>
 
+        <section class="features-section" id="features">
+            <div class="section-head">
+                <span class="eyebrow">What you get</span>
+                <h2>Everything for your trip, in one place</h2>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/>
+                        </svg>
+                    </div>
+                    <h3>Flight Search</h3>
+                    <p>Real-time flight information pulled through AviationStack so you can compare routes before you book.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M3 21V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14"/>
+                            <path d="M3 21h18"/>
+                            <path d="M9 9h2M13 9h2M9 13h2M13 13h2"/>
+                            <path d="M10 21v-4h4v4"/>
+                        </svg>
+                    </div>
+                    <h3>Hotel Discovery</h3>
+                    <p>Stays that match your budget and travel style, researched live on the web with Tavily.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M9 20l-6 2V6l6-2 6 2 6-2v16l-6 2-6-2z"/>
+                            <path d="M9 4v16M15 6v16"/>
+                        </svg>
+                    </div>
+                    <h3>Smart Itinerary</h3>
+                    <p>A day-by-day plan with sightseeing, timing and cost estimates, ready to export as a PDF.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="steps-section" id="how-it-works">
+            <div class="section-head">
+                <span class="eyebrow">How it works</span>
+                <h2>Three steps from idea to itinerary</h2>
+            </div>
+
+            <ol class="steps">
+                <li>
+                    <span class="step-num">01</span>
+                    <h3>Describe your trip</h3>
+                    <p>Tell us where, how long and your budget in plain language.</p>
+                </li>
+                <li>
+                    <span class="step-num">02</span>
+                    <h3>Agents get to work</h3>
+                    <p>Flight, hotel and itinerary agents collaborate through LangGraph.</p>
+                </li>
+                <li>
+                    <span class="step-num">03</span>
+                    <h3>Copy or download</h3>
+                    <p>Get a clean, formatted plan you can copy or save as a PDF.</p>
+                </li>
+            </ol>
+        </section>
+
     </main>
 
     <footer>
-        Built with FastAPI, LangGraph, Groq, PostgreSQL, Tavily and AviationStack
+        <div class="footer-brand">TripMate <span>AI</span></div>
+        <p>Built with FastAPI, LangGraph, Groq, PostgreSQL, Tavily and AviationStack</p>
     </footer>
 
     <!-- Markdown Renderer -->
